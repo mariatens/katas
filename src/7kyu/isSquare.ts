@@ -10,4 +10,9 @@ function isSquare(num: number): boolean {
     }
 }
 
+// simpler solution from codewars
+// function isSquare(n) {
+//     return Math.sqrt(n) % 1 === 0;
+//   }
+
 export default isSquare
