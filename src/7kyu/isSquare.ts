@@ -2,30 +2,25 @@
 
 // without Math methods
 
-function isSquare(num: number): any{
+function isSquare(num: number): boolean{
     if(num < 0){
-        for (let i = num + 1; i < 0; i++){
-            if (num / i === -i){
-                return true
-            }
-            else {
-                return false
-            }
-        }
+        return false
+    }
+    else if (num === 0){
+        return true
     }
     else if (num > 0){
-        for (let i = num -1; i > 1; i--){
+        for (let i = num - 1; i > 1; i--){
             if (num / i === i){
                 return true
             }
-            else {
-                return false
-            }
         }
     }
+    return false
     
 }
 
+// with Math numbers
 // function isSquare(num: number): boolean {
 //     let sq = Math.sqrt(num)
 //     if (sq - Math.floor(sq) !== 0){
