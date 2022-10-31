@@ -14,12 +14,12 @@ function reverseString(str){
     let reversedStr = arr.join('')
     return reversedStr
 }
-//test
-console.log(reverseString("hello"), "olleh")
+// //test
+// console.log(reverseString("hello"), "olleh")
 
 
 const capitals = {
     Afghanistan: "Kabul"
   };
 
-console.log(printCapitalsQuiz(capitals), "Of what country is Kabul the capital?: Answer: natsinahgfA")
+console.log(printCapitalsQuiz(capitals))
