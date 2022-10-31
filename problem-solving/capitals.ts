@@ -10,14 +10,14 @@ for each pair assign the reversed key to reversedKey
 return Of what country is key.value the capital?: Answer: reversedKey
 */
 
-function printCapitalsQuiz (capitals: {[index: string]: string}): string{
+function printCapitalsQuiz (capitals: {[index: string]:string}): string{
     let reversedKey= ""
-    let sentence = ""
+    let arr: string[] = []
     for (let pair in capitals){
         reversedKey = reverseString(pair)
-        sentence = `Of what country is ${capitals[pair]} the capital?: Answer: ${reversedKey}`
+        arr.push(`Of what country is ${capitals[pair]} the capital?: Answer: ${reversedKey}`)
     }
-    return sentence
+    return arr.join(' ') 
 }
 
 //helper function
