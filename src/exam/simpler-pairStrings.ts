@@ -5,3 +5,5 @@ function simpPairStrings(str: string): string {
     let pairedArray = first.map((i,j)=> i + second[j])
     return pairedArray.join('')
 }
+
+export default simpPairStrings
