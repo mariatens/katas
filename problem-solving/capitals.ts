@@ -1,4 +1,5 @@
 /*
+link to notion page for this problem: https://www.notion.so/weareacademy/Programming-Exercises-Katas-217703f82e9d4b63ba5511396707c6cb?p=76c0cdd3671946259795e7928a4fe739&pm=s
 function: printCapitalsQuiz
 params: 
     - object
