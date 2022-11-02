@@ -1,7 +1,7 @@
 function countObj(inputStr: string): {[index:string]: number}{
     let strObj = {}
     for (let letter of inputStr){
-        let counter = countNumOccurrences(letter, inputStr)
+        let counter = counterStr(letter, inputStr)
         strObj[letter] = counter
 
     }
@@ -9,7 +9,7 @@ function countObj(inputStr: string): {[index:string]: number}{
 }
 
 //helper function
-function counter(letter: string, inputStr: string): number{
+function counterStr(letter: string, inputStr: string): number{
     let counter: number = 0
     for (let char of inputStr){
         if (char === letter){
