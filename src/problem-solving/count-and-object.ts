@@ -1,5 +1,5 @@
 function countObj(inputStr: string): {[index:string]: number}{
-    let strObj = {}
+    let strObj: {[index: string]: number} = {}
     for (let letter of inputStr){
         let counter = counterStr(letter, inputStr)
         strObj[letter] = counter
@@ -22,7 +22,7 @@ function counterStr(letter: string, inputStr: string): number{
 
 // simpler function
 function counterSimple(inputStr: string): {[index: string]:number}{
-    let obj: {} = {}
+    let obj: {[index: string]: number} = {}
     for (let char of inputStr){
         if(obj[char]){
             obj[char]++
