@@ -27,6 +27,7 @@ console.log(printKeysValuesEasy(characters))
 
 //print only values 
 //can also do Object.values(obj)
+//this prints it as an array
 
 //add keys and values to object
 // with function
