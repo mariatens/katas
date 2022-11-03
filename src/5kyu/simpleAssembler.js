@@ -3,7 +3,8 @@
 function simpleAssembler(program){
         let splitStep = program[0].split(' ')
         let a = splitStep[2]
-        for (let step of program){
+        let inst = 0
+        for (let [index,step] of program.entries()){
             if (step.includes('inc')){
                 a ++
             }
@@ -11,14 +12,22 @@ function simpleAssembler(program){
                 a--
             }
             else if (step.includes('jnz') && a != 0){
-                //let inst = index of step - step[2]
-                if (inst.includes('inc')){
+                if (step[6] === "-"){
+                     inst = index - step[7] 
+                }
+                else{
+                    inst = index + step[6]
+                }// don't understand decrease its value until 0
+                //step[2] is the number located in the jnz instruction
+                if (program[inst].includes('inc')){
                     a ++
                 }
-                else if (inst.includes('dec')){
+                else if (program[inst].includes('dec')){
                     a--
                 }
             }
         }
+    return a
+}
 
-        }
+console.log(simpleAssembler(["mov a 5", "inc a", "dec a", "dec a", "jnz a -1", "inc a"]))
