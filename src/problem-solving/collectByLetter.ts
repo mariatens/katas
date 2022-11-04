@@ -4,7 +4,6 @@
 function collectByLetter(words: string[]): {[index: string]: string[]}{
     let obj: {[index: string]: string[]} = {}
         for (let word of words){
-            console.log(word)
             if(obj[word[0]]){
                 obj[word[0]].push(word)
             }
@@ -12,10 +11,10 @@ function collectByLetter(words: string[]): {[index: string]: string[]}{
                 obj[word[0]] = [word]
             }
         }
-        return obj
-    }
+    return obj
+}
   
-
+console.log(collectByLetter(["shall", "i", "compare", "thee", "to", "a", "summers"]))
     
 
 
