@@ -4,8 +4,9 @@ test("markXSpots given a two dimensional array, return the co-ordinates of x", (
     expect(markXSpots([
         ['o', 'o'],
         ['o', 'o']
-      ])).toBe([]);
+      ])).toStrictEqual([]);
 });
+//need that because it's comparing arrays
 
 test("markXSpots given a two dimensional array, return the co-ordinates of x", () => {
     expect(markXSpots(
