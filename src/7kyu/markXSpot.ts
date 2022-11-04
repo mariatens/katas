@@ -15,13 +15,16 @@ function markXSpot(nestArr: string[][]): number[]{
             }
         }
     }
+    if (positions.length > 2){
+        return []
+    }
     return positions
 }
 
 export default markXSpot
 
 
-// console.log(markXSpot([['1', '2'],['x']]))
+console.log(markXSpot([['x', 'o'],['o', 'o']]))
 // console.log(markXSpot([
 //     ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
 //     ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
