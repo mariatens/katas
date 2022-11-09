@@ -1,5 +1,6 @@
-function filter(inputArr: number[], predicateFn: (el: number)=> boolean): number[]{
-    let newArr: number[] = []
+// function filter(inputArr: number[], predicateFn: (el: number)=> boolean): number[]{
+function filter<I>(inputArr: I[], predicateFn: (el: I)=> boolean): I[]{
+    let newArr: I[] = []
     for (let element of inputArr){
        if(predicateFn(element)){
         newArr.push(element)
