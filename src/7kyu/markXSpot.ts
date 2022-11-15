@@ -24,7 +24,7 @@ function markXSpot(nestArr: string[][]): number[]{
 export default markXSpot
 
 
-console.log(markXSpot([['x', 'o'],['o', 'o']]))
+// console.log(markXSpot([['x', 'o'],['o', 'o']]))
 // console.log(markXSpot([
 //     ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],
 //     ['o', 'o', 'o', 'o', 'o', 'o', 'o', 'o'],

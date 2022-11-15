@@ -14,5 +14,5 @@ test("markXSpots given a two dimensional array, return the co-ordinates of x", (
             ['x', 'o'],
             ['o', 'o']
           ]
-      )).toBe([[0,0]]);
+      )).toStrictEqual([[0,0]]);
 });
