@@ -1,3 +1,5 @@
+import { maxHeaderSize } from "http"
+
 function getMostCommonLetters(inputText: string, numberOfWinners: number): [string,number][]{
     let obj: {[index: string]: number} = {}
         for (let letter of inputText){
@@ -9,9 +11,16 @@ function getMostCommonLetters(inputText: string, numberOfWinners: number): [stri
             }
         }
     const tuples = Object.entries(obj)
-    console.log(obj)
-    // tuples.sort((a,b)=>b-a)
-    return tuples.slice(numberOfWinners)
+    const maxArr: [[string, number]] = [tuples[0]]
+    for (const array of tuples){
+        if (array[1]> ){
+            // maxArr.push(array)
+            console.log(array)
+            console.log(tuples[0])
+    }
 
+    // values.slice(numberOfWinners)
+    }
+return [["h", 2]]
 }
 console.log(getMostCommonLetters("hello", -3))
