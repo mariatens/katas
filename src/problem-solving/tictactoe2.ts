@@ -1,23 +1,15 @@
-type PosState2 = "X"|"O"|" "
+type Player2 = "X" | "O"
+type PosState = Player | ""
 
 type BoardState2 = [
-    PosState2,PosState2,PosState2,
-    PosState2,PosState2,PosState2,
-    PosState2,PosState2,PosState2
+    PosState,PosState,PosState,
+    PosState,PosState,PosState,
+    PosState,PosState,PosState
 ]
-
+// type WinState = {state: "draw"} | { state: "not finished"} | {state:"won", winner:Player}
 type WinState = "draw" | "X won" | "O won" | "not finished"
 
-// function tictactoe(board: BoardState2): WinState{
-//     ticatactoe(board)
-//     if(board.includes('')=== false){
-//         return "draw"
-//     }else{
-//         return "not finished"
-//     }
-// } 
-
-function whoWins(element: string): WinState{
+function whoWins(element: PosState): WinState{
     if (element==="X" ){
         return "X won"
     }else if(element==="O"){
@@ -44,23 +36,37 @@ function ticatactoe(board: BoardState2): WinState{
         result= whoWins(board[4])
     }  
     if (result !== "X won" && result !== "O won"){
-        if(board.includes(' ')=== false){
-            result= "draw"
+        if(board.includes('')=== false){
+            result = "draw"
         }else{
-            result= "not finished"
+            result ="not finished"
         }   
     }
     else{
         return result
     }
-    
-    return result 
+    return result
 }
 
 console.log(ticatactoe(["O", "O", "X", 
                             "X", "X", "O", 
-                            "O","X"," "]))
+                            "O","X",""]))
 
+console.log(ticatactoe(["", "", "", 
+                            "", "", "", 
+                            "","",""]))                      
+
+
+
+
+// function tictactoe(board: BoardState2): WinState{
+//     ticatactoe(board)
+//     if(board.includes('')=== false){
+//         return "draw"
+//     }else{
+//         return "not finished"
+//     }
+// } 
 
 // function checkHorizontal(board: BoardState2): WinState{
 //     for (let i  = 0; i < 9; i+=3){
