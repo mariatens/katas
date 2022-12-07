@@ -50,6 +50,7 @@ delete obj['oldKey'];
 
 //modify values to object
 const merge = Object.assign(target, newRecord);
+
 // other ways
 // let pair = {Juana: "Perez"};
 //     obj = {...obj, ...pair};
