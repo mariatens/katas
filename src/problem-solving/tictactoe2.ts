@@ -6,6 +6,7 @@ type BoardState2 = [
     PosState,PosState,PosState,
     PosState,PosState,PosState
 ]
+
 // type WinState = {state: "draw"} | { state: "not finished"} | {state:"won", winner:Player}
 type WinState = "draw" | "X won" | "O won" | "not finished"
 
