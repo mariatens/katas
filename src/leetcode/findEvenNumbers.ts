@@ -1,5 +1,4 @@
 //https://leetcode.com/problems/finding-3-digit-even-numbers/
-//times out
 function findEvenNumbers(digits: number[]): number[] {
     const finalArr: number[] = []
     for (let i = 0; i<digits.length;i++){
@@ -19,3 +18,4 @@ function findEvenNumbers(digits: number[]): number[] {
     } 
     return finalArr.sort((a,b)=> a-b)
 }
+

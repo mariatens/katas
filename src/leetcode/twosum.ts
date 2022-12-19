@@ -12,6 +12,29 @@ function twoSum(nums: number[], target: number): number[]|undefined {
     }
 
 
+//optimised code with hash map:
+
+function twoSumOptimised(nums: number[], target: number): number[]|undefined {
+    // Create an empty hash map
+    const indices: {[key: number]: number} = {}
+
+    // Loop through the input array
+    for (let i = 0; i < nums.length; i++) {
+        // Calculate the difference between the target sum and the current element
+        const diff = target - nums[i]
+
+        // If the difference is in the hash map, return the indices of the pair
+        if (indices[diff] !== undefined) {
+            return [indices[diff], i]
+        }
+
+        // Otherwise, add the current element and its index to the hash map
+        indices[nums[i]] = i
+    }
+
+    // If no pair was found, return undefined
+    return undefined
+}
 
 
 

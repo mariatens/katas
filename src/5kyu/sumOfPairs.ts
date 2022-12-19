@@ -17,3 +17,26 @@ function sumPairs(ints: number[], s: number) {
       }
     return winningPair
   }
+
+  //optimised version with hash map:
+  export function sumPairsOptimised(ints: number[], s: number) {
+    // Create an empty hash map
+    const indices: {[key: number]: number} = {}
+
+    // Loop through the input array
+    for (let i = 0; i < ints.length; i++) {
+        // Calculate the difference between the target sum and the current element
+        const diff = s - ints[i]
+
+        // If the difference is in the hash map, return the indices of the pair
+        if (indices[diff] !== undefined) {
+            return [diff, ints[i]]
+        }
+
+        // Otherwise, add the current element and its index to the hash map
+        indices[ints[i]] = i
+    }
+
+    // If no pair was found, return undefined
+    return undefined
+}
