@@ -2,22 +2,19 @@
 
 // without Math methods
 
-function isSquare(num: number): boolean{
-    if(num < 0){
-        return false
+function isSquare(num: number): boolean {
+  if (num < 0) {
+    return false;
+  } else if (num === 0) {
+    return true;
+  } else if (num > 0) {
+    for (let i = num - 1; i > 1; i--) {
+      if (num / i === i) {
+        return true;
+      }
     }
-    else if (num === 0){
-        return true
-    }
-    else if (num > 0){
-        for (let i = num - 1; i > 1; i--){
-            if (num / i === i){
-                return true
-            }
-        }
-    }
-    return false
-    
+  }
+  return false;
 }
 
 // with Math numbers
@@ -36,4 +33,4 @@ function isSquare(num: number): boolean{
 //     return Math.sqrt(n) % 1 === 0;
 //   }
 
-export default isSquare
+export default isSquare;

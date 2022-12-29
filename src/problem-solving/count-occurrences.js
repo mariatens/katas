@@ -29,44 +29,40 @@ funtion:
     endfor
     return COUNTER
 */
-function countOccurrences(inputStr){
-    let strObj = {}
-    for (let letter of inputStr){
-        let counter = countNumOccurrences(letter, inputStr)
-        strObj[letter] = counter
-
-    }
-    return strObj
+function countOccurrences(inputStr) {
+  let strObj = {};
+  for (let letter of inputStr) {
+    let counter = countNumOccurrences(letter, inputStr);
+    strObj[letter] = counter;
+  }
+  return strObj;
 }
 
 //helper function
-function countNumOccurrences(letter, inputStr){
-    let counter = 0
-    for (let char of inputStr){
-        if (char === letter){
-            counter ++
-        }
+function countNumOccurrences(letter, inputStr) {
+  let counter = 0;
+  for (let char of inputStr) {
+    if (char === letter) {
+      counter++;
     }
-    return counter
-
+  }
+  return counter;
 }
-
 
 // test cases
-console.log(countOccurrences("HELLO"), {"H": 1, "E": 1, "L": 2, "O": 1})
-console.log(countOccurrences("WORLD"), {"W": 1, "O": 1, "L": 1, "R": 1, "D": 1})
+console.log(countOccurrences("HELLO"), { H: 1, E: 1, L: 2, O: 1 });
+console.log(countOccurrences("WORLD"), { W: 1, O: 1, L: 1, R: 1, D: 1 });
 
-//simpler way of doing it 
-function countOccurrencesSimple(inputStr){
-    let obj = {}
-    for (let char of inputStr){
-        if(obj[char]){
-            obj[char]++
-        }
-        else{
-            obj[char] = 1
-        }
+//simpler way of doing it
+function countOccurrencesSimple(inputStr) {
+  let obj = {};
+  for (let char of inputStr) {
+    if (obj[char]) {
+      obj[char]++;
+    } else {
+      obj[char] = 1;
     }
-    return obj
+  }
+  return obj;
 }
-console.log(countOccurrencesSimple("HELLO"), {"H": 1, "E": 1, "L": 2, "O": 1})
+console.log(countOccurrencesSimple("HELLO"), { H: 1, E: 1, L: 2, O: 1 });

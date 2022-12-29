@@ -2,36 +2,29 @@
 
 // this may not work because it can create a and b at the same time
 // trying to simplify it
-function simpleAssembler(program){
-    for (step of program){
-        let splitStep = step.split(' ')
-        if (splitStep.includes('mov') && splitStep.includes('a')){
-            let a = step[2]
-            if (splitStep.includes('inc')){
-                a++
-            }
-            else if (splitStep.includes('dec')){
-                a--
-            }
-            else if (splitStep.includes('jnz') && a != 0){
-                
-            }
-        }
-        else if (splitStep.includes('mov') && splitStep.includes('b')){
-            let b = step[2]
-            if (splitStep.includes('inc')){
-                b++
-            }
-            else if (splitStep.includes('dec')){
-                b--
-            }
-            else if (splitStep.includes('jnz') && b != 0){
-                // how to say go to the previous instruction?
-
-            }
-        }
+function simpleAssembler(program) {
+  for (step of program) {
+    let splitStep = step.split(" ");
+    if (splitStep.includes("mov") && splitStep.includes("a")) {
+      let a = step[2];
+      if (splitStep.includes("inc")) {
+        a++;
+      } else if (splitStep.includes("dec")) {
+        a--;
+      } else if (splitStep.includes("jnz") && a != 0) {
+      }
+    } else if (splitStep.includes("mov") && splitStep.includes("b")) {
+      let b = step[2];
+      if (splitStep.includes("inc")) {
+        b++;
+      } else if (splitStep.includes("dec")) {
+        b--;
+      } else if (splitStep.includes("jnz") && b != 0) {
+        // how to say go to the previous instruction?
+      }
     }
-    return {'a':a, 'b': b} //how to say include it if it exists
+  }
+  return { a: a, b: b }; //how to say include it if it exists
 }
 
 // function simpleAssembler(program){
@@ -56,12 +49,9 @@ function simpleAssembler(program){
 //         else if (step.includes('dec')&& splitStep.includes('b')){
 //             b--
 //         }
-        
 
 //     }
 // }
-
-
 
 // function simpleAssembler(program){
 //         let splitStep = program[0].split(' ')
@@ -76,7 +66,7 @@ function simpleAssembler(program){
 //             }
 //             else if (step.includes('jnz') && a != 0){
 //                 if (step[6] === "-"){
-//                      inst = index - step[7] 
+//                      inst = index - step[7]
 //                 }
 //                 else{
 //                     inst = index + step[6]
@@ -93,4 +83,6 @@ function simpleAssembler(program){
 //     return a
 // }
 
-console.log(simpleAssembler(["mov a 5", "inc a", "dec a", "dec a", "jnz a -1", "inc a"]))
+console.log(
+  simpleAssembler(["mov a 5", "inc a", "dec a", "dec a", "jnz a -1", "inc a"])
+);

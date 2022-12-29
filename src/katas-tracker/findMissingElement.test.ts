@@ -1,6 +1,5 @@
 import findMissingElements from "./findMissingElement";
 
-
 test("", () => {
   expect(findMissingElements(["hello", "bye"], ["hello"])).toEqual(["bye"]);
 });

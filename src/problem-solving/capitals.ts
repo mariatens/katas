@@ -10,23 +10,25 @@ for each pair assign the reversed key to reversedKey
 return Of what country is key.value the capital?: Answer: reversedKey
 */
 
-function printCapitalsQuiz (capitals: {[index: string]:string}): string{
-    let reversedKey= ""
-    let arr: string[] = []
-    for (let pair in capitals){
-        reversedKey = reverseString(pair)
-        arr.push(`Of what country is ${capitals[pair]} the capital?: Answer: ${reversedKey}`)
-    }
-    return arr.join(' ') 
+function printCapitalsQuiz(capitals: { [index: string]: string }): string {
+  let reversedKey = "";
+  let arr: string[] = [];
+  for (let pair in capitals) {
+    reversedKey = reverseString(pair);
+    arr.push(
+      `Of what country is ${capitals[pair]} the capital?: Answer: ${reversedKey}`
+    );
+  }
+  return arr.join(" ");
 }
 
 //helper function
 // return: string
-function reverseString(str: string): string{
-    let arr = str.split('')
-    let reversedArr = arr.reverse()
-    let reversedStr = reversedArr.join('')
-    return reversedStr
+function reverseString(str: string): string {
+  let arr = str.split("");
+  let reversedArr = arr.reverse();
+  let reversedStr = reversedArr.join("");
+  return reversedStr;
 }
 
 export default printCapitalsQuiz;

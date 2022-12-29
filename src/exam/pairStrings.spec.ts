@@ -1,5 +1,5 @@
-import pairStrings from './pairStrings'
+import pairStrings from "./pairStrings";
 
 test("pairStrings ", () => {
-    expect(pairStrings("abc*def")).toBe("adbecf");
+  expect(pairStrings("abc*def")).toBe("adbecf");
 });
