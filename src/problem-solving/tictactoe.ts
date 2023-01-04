@@ -24,7 +24,7 @@ function calcWinState(boardState: BoardState): WinStatus {
     return "X won";
   }
   // if the same index in all subarrays are the same -won
-  return "";
+  return "X won";
 
   // if subarray 0 and 2 diagonals (sub1index0, sub2index1, sub3index3, are the same - won
 }

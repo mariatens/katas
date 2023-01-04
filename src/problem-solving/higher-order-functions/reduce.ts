@@ -6,12 +6,14 @@ function reduce<T>(array: any[], fn: Function, first: any): any {
   return result;
 }
 
-console.log(reduce([10, 20, 30], (a: number, b:number) => a + b, 0))
-console.log(reduce(
+console.log(reduce([10, 20, 30], (a: number, b: number) => a + b, 0));
+console.log(
+  reduce(
     ["charlie", "miles", "thelonious", "dizzy", "chet"],
-    (a:any, b:any) => (a + "" + b),
+    (a: any, b: any) => a + "" + b,
     ""
-  ))
+  )
+);
 console.log(
   reduce(
     ["charlie", "miles", "thelonious", "dizzy", "chet"],
